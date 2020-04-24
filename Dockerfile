@@ -3,9 +3,9 @@ FROM centos:7
 WORKDIR /home/install
 
 RUN yum install -y wget && \
-    wget https://npm.taobao.org/mirrors/node/v10.15.3/node-v10.15.3-linux-x64.tar.gz && \
-    tar xf node-v10.15.3-linux-x64.tar.gz -C /usr/local/ && \
-    mv /usr/local/node-v10.15.3-linux-x64/ /usr/local/nodejs && \
+    wget https://npm.taobao.org/mirrors/node/v12.10.0/node-v12.10.0-linux-x64.tar.gz && \
+    tar xf node-v12.10.0-linux-x64.tar.gz -C /usr/local/ && \
+    mv /usr/local/node-v12.10.0-linux-x64/ /usr/local/nodejs && \
     export PATH="/usr/local/nodejs/bin:$PATH" && \
     source /etc/profile && \
     npm install -g nrm && \

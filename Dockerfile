@@ -3,7 +3,7 @@ FROM centos:7
 WORKDIR /home/install
 
 RUN yum install -y wget && \
-    wget -O node-linux-x64.tar.gz https://npm.taobao.org/mirrors/node/v12.10.0/node-v12.10.0-linux-x64.tar.gz && \
+    wget https://npm.taobao.org/mirrors/node/v12.10.0/node-v12.10.0-linux-x64.tar.gz -O node-linux-x64.tar.gz && \
     tar xf node-linux-x64.tar.gz -C /usr/local/ && \
     mv /usr/local/node-linux-x64/ /usr/local/nodejs && \
     export PATH="/usr/local/nodejs/bin:$PATH" && \
@@ -18,7 +18,7 @@ RUN yum install -y wget && \
     yum -y install gcc gcc-c++  automake autoconf libtool make && \
     yum -y install curl-devel expat-devel gettext-devel openssl-devel zlib-devel && \
     yum remove -y git && \
-    wget -O git-linux-x64.tar.gz https://gitee.com/SpiritLing/git/repository/archive/v2.26.2?format=tar.gz && \
+    wget https://gitee.com/SpiritLing/git/repository/archive/v2.26.2?format=tar.gz -O git-linux-x64.tar.gz && \
     tar -zxvf git-linux-x64.tar.gz && \
     cd git && make configure && \
     ./configure --prefix=/usr/local/git && \

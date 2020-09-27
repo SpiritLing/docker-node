@@ -29,7 +29,6 @@ RUN yum install -y wget && \
     ln -s /usr/local/git/bin/git /usr/bin/git && \
     cd .. && \
     rm -rf ./* && \
-    yum remove -y gcc gcc-c++  automake autoconf libtool make curl-devel expat-devel gettext-devel openssl-devel zlib-devel
 
 WORKDIR /home/nodeuser
 

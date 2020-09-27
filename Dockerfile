@@ -18,6 +18,7 @@ RUN yum install -y wget && \
     yum -y install gcc gcc-c++  automake autoconf libtool make && \
     yum -y install curl-devel expat-devel gettext-devel openssl-devel zlib-devel && \
     yum remove -y git && \
+    yum -y install python && \
     wget https://gitee.com/SpiritLing/git/repository/archive/v2.28.0?format=tar.gz && \
     mv v2.28.0?format=tar.gz git-2.28.0.tar.gz && \
     tar -zxvf git-2.28.0.tar.gz && \
